@@ -1,0 +1,3 @@
+# Ignore cache files
+corin/__pycache__
+.idea/

@@ -1,0 +1,126 @@
+WindowManager:
+    MainWindow:
+    ChoiceQuestionsWindow:
+    ChoiceTenQuestionsWindow:
+
+
+<MainWindow>:
+    name: 'main'
+    Label:
+        text: 'Corin'
+        pos_hint: {'x': 0.3, 'top': 1}
+        size_hint: 0.45, 0.2
+        font_size: 40
+    Button:
+        text: 'Choice'
+        pos_hint: {'x': 0.38, 'top': 0.8}
+        size_hint: 0.3, 0.1
+        on_release:
+            app.root.current= 'choice_questions'
+            root.manager.transition.direction= 'left'
+    Button:
+        text: 'True/False'
+        pos_hint: {'x': .38, 'top': .7}
+        size_hint: .3, .1
+    Button:
+        text: 'Matching'
+        pos_hint: {'x': .38, 'top': .6}
+        size_hint: .3, .1
+    Button:
+        text: 'Fill in the blank space'
+        pos_hint: {'x': .38, 'top': .5}
+        size_hint: .3, .1
+    Button:
+        text: 'Give short answer'
+        pos_hint: {'x': .38, 'top': .4}
+        size_hint: .3, .1
+    Button:
+        text: 'All'
+        pos_hint: {'x': .38, 'top': .3}
+        size_hint: .3, .1
+
+<ChoiceQuestionsWindow>:
+    name: 'choice_questions'
+    Label:
+        text: 'Choice'
+        pos_hint: {'x': 0.3, 'top': 1}
+        size_hint: .45, .2
+        font_size: 40
+    Label:
+        text: 'Questions'
+        pos_hint: {'x': 0.3, 'top':0.9}
+        size_hint: 0.45, .2
+        font_size: 25
+    Button:
+        text: '10'
+        size_hint: .3, .1
+        pos_hint: {'x': .38, 'top': 0.7}
+        on_release:
+            app.root.current= 'choice_ten_questions'
+            root.manager.transition.direction= 'left'
+    Button:
+        text: '20'
+        size_hint: .3, .1
+        pos_hint: {'x': .38, 'top': .6}
+    Button:
+        text: '30'
+        size_hint: .3, .1
+        pos_hint: {'x': .38, 'top': .5}
+    Button:
+        text: '40'
+        size_hint: .3, .1
+        pos_hint: {'x': .38, 'top': .4}
+    Button:
+        text: '50'
+        size_hint: .3, .1
+        pos_hint: {'x': .38, 'top': .3}
+    Button:
+        text: '60'
+        size_hint: .3, .1
+        pos_hint: {'x': .38, 'top': .2}
+
+    Button:
+        text: 'Back'
+        size_hint: .1, .1
+        pos_hint: {'x': .01, 'top': 0.1}
+        on_release:
+            app.root.current= 'main'
+            root.manager.transition.direction= 'right'
+
+<ChoiceTenQuestionsWindow>:
+    name: 'choice_ten_questions'
+    Label:
+        text: 'Choice Ten Questions'
+        pos_hint: {'x': .3, 'top': 1}
+        size_hint: .45, .2
+        font_size: 40
+    Label:
+        text: "Teacher's Answer"
+        pos_hint: {'x': .3, 'top': .9}
+        size_hint: .45, .2
+        font_size: 20
+    Label:
+        text: '1.'
+        pos_hint: {'x': .02, 'top': .8}
+        size_hint: 0, .2
+        font_size: 20
+    Spinner:
+        id: number1
+        text: 'True/False'
+        values: ['True', 'False']
+        pos_hint: {'x': .06, 'top': .75}
+        size_hint: .2, .08
+    Label:
+        text: '2'
+        pos_hint: {'x': .02, 'top': .6}
+        size_hint: 0, .2
+        font_size: 20
+    Spinner:
+        id: number2
+        text: 'True/False'
+        values: {'True', 'False'}
+        pos_hint: {'x': .06, 'top': .45}
+        size_hint: .2, .08
+    Label:
+        text: '3'
+        pos_hint: {}
